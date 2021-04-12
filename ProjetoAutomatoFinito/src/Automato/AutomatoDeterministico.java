@@ -5,16 +5,12 @@ public class AutomatoDeterministico implements IAutomato {
 	private final String alfabeto;
 	private final String palavra;
 	private final char[] arraySimbolos;
-	private String contemSequencia;
-	private boolean aceita;
-	
+
 	private Transicao[][] transicoes;
 	
-	public AutomatoDeterministico(String alfabeto, String palavra, String contemSequencia, boolean aceita) {
+	public AutomatoDeterministico(String alfabeto, String palavra) {
 		this.alfabeto = alfabeto;
 		this.palavra = palavra;
-		this.contemSequencia = contemSequencia;
-		this.aceita = aceita;
 		
 		this.arraySimbolos = this.palavra.toCharArray();
 	}

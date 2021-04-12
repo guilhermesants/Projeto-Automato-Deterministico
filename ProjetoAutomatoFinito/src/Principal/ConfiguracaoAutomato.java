@@ -9,9 +9,9 @@ public class ConfiguracaoAutomato {
 	
 	static Scanner scan = new Scanner(System.in);
 	
-	public static String DefineAutomato(String alfabeto, String palavra, String contemSequencia, boolean aceita) {
+	public static String DefineAutomato(String alfabeto, String palavra) {
 		
-		var automato = new AutomatoDeterministico(alfabeto, palavra, contemSequencia, aceita);
+		var automato = new AutomatoDeterministico(alfabeto, palavra);
 		
 		automato.setTransicoes(DefinirTransicoes());
 
@@ -86,7 +86,7 @@ public class ConfiguracaoAutomato {
 	
 	public static void main(String[] args) {
 		
-		System.out.print(DefineAutomato("ab", "aababb", "aa", true));
+		System.out.print(DefineAutomato("ab", "aababb"));
 		
 	}
 
